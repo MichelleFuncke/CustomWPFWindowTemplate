@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control="clr-namespace:Mm.Wpf.Controls;assembly=Mm.Wpf.Controls"
-        Title="Hello" Height="350" Width="525" Icon="239887.png" AllowsTransparency="True" WindowStyle="None">
+        Title="Hello" Height="350" Width="525" Icon="239887.png" AllowsTransparency="True" WindowStyle="None" BorderBrush="#FF0B0BF1" Foreground="#FFE60B0B">
     <Grid>
-        <TextBlock Text="Here goes the content!" Margin="33,32,0,0"/>
+        <TextBlock Text="Here goes the content!" Margin="33,32,0,0" Foreground="#FF0A0A0A"/>
     </Grid>
 </control:CustomWindow>
