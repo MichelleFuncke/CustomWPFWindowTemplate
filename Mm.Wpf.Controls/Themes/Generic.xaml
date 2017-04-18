@@ -43,15 +43,16 @@
         <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Silver"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:CustomWindow}">
                     <!--Set the Backgroud property to the color you want-->
                     <Border>
                         <Border.Effect>
-                            <DropShadowEffect x:Name="WindowBorder" BlurRadius="5" ShadowDepth="0" Opacity="0.8" />
+                            <DropShadowEffect BlurRadius="5" ShadowDepth="0" Opacity="0.8" Color="Black" />
                         </Border.Effect>
-                        <Grid x:Name="WindowBackground" Margin="5">
+                        <Grid Background="White" Margin="5">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -67,14 +68,17 @@
                                     <Label x:Name="WindowTitle"/>
                                 </StackPanel>
 
-                                <Rectangle x:Name="moveRectangle" Fill="Transparent" Grid.Row="0" Grid.Column="0"/>
-                                
+                                <Rectangle x:Name="moveRectangle" Fill="Transparent"
+                                               Grid.Row="0" Grid.Column="0"/>
                                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                                    <Button x:Name="minimizeButton" Style="{StaticResource WindowButtonStyle}" Content="0" />
-                                    <Button x:Name="closeButton" Style="{StaticResource WindowButtonStyle}" Content="r" />
+                                    <Button x:Name="minimizeButton" Style="{StaticResource WindowButtonStyle}"
+                                                Content="0" />
+                                    <Button x:Name="closeButton" Style="{StaticResource WindowButtonStyle}"
+                                                Content="r" />
                                 </StackPanel>
 
-                                <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="2,2,2,2">
+                                <Grid Background="{TemplateBinding Background}"
+                                               Grid.Row="1" Grid.ColumnSpan="2" Margin="2,2,2,2">
                                     <AdornerDecorator>
                                         <ContentPresenter/>
                                     </AdornerDecorator>

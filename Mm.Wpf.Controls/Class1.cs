@@ -9,8 +9,6 @@ using System.Windows.Input;
 using System.Windows.Shapes;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
-using System.Windows.Media.Effects;
-using System.Windows.Media;
 
 namespace Mm.Wpf.Controls
 {
@@ -55,16 +53,9 @@ namespace Mm.Wpf.Controls
 
             Label WindowTitle = GetTemplateChild("WindowTitle") as Label;
             WindowTitle.Content = Title;
-            WindowTitle.Foreground = Foreground;
 
             Image WindowIcon = GetTemplateChild("WindowIcon") as Image;
             WindowIcon.Source = Icon;
-
-            DropShadowEffect WindowBorder = GetTemplateChild("WindowBorder") as DropShadowEffect;
-            WindowBorder.Color = ((SolidColorBrush)BorderBrush).Color;
-
-            Grid WindowBackground = GetTemplateChild("WindowBackground") as Grid;
-            WindowBackground.Background = Background;
 
             base.OnApplyTemplate();
         }
