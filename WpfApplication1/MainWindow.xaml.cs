@@ -13,13 +13,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.Windows.Fixed;
 
 namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : MinimizableWindow
+    //public partial class MainWindow : MinimizableWindow
+    public partial class MainWindow : FixedWindow
     {
         public MainWindow()
         {

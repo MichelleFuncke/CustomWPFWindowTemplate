@@ -100,6 +100,10 @@
       <Project>{81ae3dd4-cee4-40d2-80af-8371f4956026}</Project>
       <Name>WPF.Windows.Minimizable</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WPF.Windows.Fixed\WPF.Windows.Fixed.csproj">
+      <Project>{a15823da-af48-411b-8e29-2543d4106580}</Project>
+      <Name>WPF.Windows.Fixed</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="239887.png" />
