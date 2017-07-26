@@ -19,7 +19,7 @@ namespace WpfApplication1
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : CustomWindow
+    public partial class MainWindow : MinimizableWindow
     {
         public MainWindow()
         {

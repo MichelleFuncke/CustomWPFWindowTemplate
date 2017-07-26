@@ -14,7 +14,7 @@ using System.Windows.Media;
 
 namespace Mm.Wpf.Controls
 {
-    public class CustomWindow : Window
+    public class MinimizableWindow : Window
     {
         #region Click events
         protected void MinimizeClick(object sender, RoutedEventArgs e)
@@ -33,10 +33,10 @@ namespace Mm.Wpf.Controls
         }
         #endregion
 
-        static CustomWindow()
+        static MinimizableWindow()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomWindow),
-                new FrameworkPropertyMetadata(typeof(CustomWindow)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(MinimizableWindow),
+                new FrameworkPropertyMetadata(typeof(MinimizableWindow)));
         }
 
         public override void OnApplyTemplate()

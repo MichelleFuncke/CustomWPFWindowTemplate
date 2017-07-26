@@ -46,14 +46,14 @@
     </Style>
 
     <!-- Window style -->
-    <Style TargetType="{x:Type local:CustomWindow}">
+    <Style TargetType="{x:Type local:MinimizableWindow}">
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="Background" Value="{StaticResource WindowBackground}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:CustomWindow}">
+                <ControlTemplate TargetType="{x:Type local:MinimizableWindow}">
                     <!--Set the Backgroud property to the color you want-->
                     <Border>
                         <Border.Effect>

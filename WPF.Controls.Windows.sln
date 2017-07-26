@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Windows.Minimizable", "Mm.Wpf.Controls\WPF.Windows.Minimizable.csproj", "{81AE3DD4-CEE4-40D2-80AF-8371F4956026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{ED0A9062-8509-4C48-B8A0-D9D9DCD44E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Windows.Maximizable", "WPF.Windows.Maximizable\WPF.Windows.Maximizable.csproj", "{F7F10C52-6DD8-49FC-833C-C19C31FE4BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Windows.Fixed", "WPF.Windows.Fixed\WPF.Windows.Fixed.csproj", "{A15823DA-AF48-411B-8E29-2543D4106580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.Windows.Resizable", "WPF.Windows.Resizable\WPF.Windows.Resizable.csproj", "{F7579C7D-325F-422C-84DA-926D72EF2F93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81AE3DD4-CEE4-40D2-80AF-8371F4956026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AE3DD4-CEE4-40D2-80AF-8371F4956026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AE3DD4-CEE4-40D2-80AF-8371F4956026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AE3DD4-CEE4-40D2-80AF-8371F4956026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0A9062-8509-4C48-B8A0-D9D9DCD44E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0A9062-8509-4C48-B8A0-D9D9DCD44E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0A9062-8509-4C48-B8A0-D9D9DCD44E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0A9062-8509-4C48-B8A0-D9D9DCD44E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F10C52-6DD8-49FC-833C-C19C31FE4BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F10C52-6DD8-49FC-833C-C19C31FE4BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F10C52-6DD8-49FC-833C-C19C31FE4BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F10C52-6DD8-49FC-833C-C19C31FE4BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A15823DA-AF48-411B-8E29-2543D4106580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15823DA-AF48-411B-8E29-2543D4106580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15823DA-AF48-411B-8E29-2543D4106580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15823DA-AF48-411B-8E29-2543D4106580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7579C7D-325F-422C-84DA-926D72EF2F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7579C7D-325F-422C-84DA-926D72EF2F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7579C7D-325F-422C-84DA-926D72EF2F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7579C7D-325F-422C-84DA-926D72EF2F93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

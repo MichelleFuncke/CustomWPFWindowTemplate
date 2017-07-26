@@ -96,9 +96,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mm.Wpf.Controls\Mm.Wpf.Controls.csproj">
+    <ProjectReference Include="..\Mm.Wpf.Controls\WPF.Windows.Minimizable.csproj">
       <Project>{81ae3dd4-cee4-40d2-80af-8371f4956026}</Project>
-      <Name>Mm.Wpf.Controls</Name>
+      <Name>WPF.Windows.Minimizable</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
