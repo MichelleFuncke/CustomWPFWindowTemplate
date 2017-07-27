@@ -1,5 +1,4 @@
-﻿using Mm.Wpf.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF.Windows.Fixed;
 using WPF.Windows.Maximizable;
+using WPF.Windows.Minimizable;
 using WPF.Windows.Resizable;
 
 namespace WpfApplication1
@@ -23,7 +23,7 @@ namespace WpfApplication1
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     //public partial class MainWindow : MinimizableWindow
-    public partial class MainWindow : ResizableWindow
+    public partial class MainWindow : MinimizableWindow
     {
         public MainWindow()
         {

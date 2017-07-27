@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Media.Effects;
 using System.Windows.Media;
 
-namespace Mm.Wpf.Controls
+namespace WPF.Windows.Minimizable
 {
     public class MinimizableWindow : Window
     {

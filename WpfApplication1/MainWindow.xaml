@@ -1,9 +1,9 @@
-﻿<control:ResizableWindow x:Class="WpfApplication1.MainWindow"
+﻿<control:MinimizableWindow x:Class="WpfApplication1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:control="clr-namespace:WPF.Windows.Resizable;assembly=WPF.Windows.Resizable"
-        Title="Hello" Height="350" Width="525" Icon="239887.png" AllowsTransparency="True" WindowStyle="None" BorderBrush="#FF1B06F0">
+        xmlns:control="clr-namespace:WPF.Windows.Minimizable;assembly=WPF.Windows.Minimizable"
+        Title="Hello" Height="350" Width="525" Icon="239887.png" AllowsTransparency="True" WindowStyle="None" BorderBrush="#FF00AADE">
     <Grid>
         <TextBlock Text="Here goes the content!" Margin="33,32,0,0"/>
     </Grid>
-</control:ResizableWindow>
+</control:MinimizableWindow>

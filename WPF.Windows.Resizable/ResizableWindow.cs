@@ -16,6 +16,20 @@ namespace WPF.Windows.Resizable
 {
     public class ResizableWindow : Window
     {
+        private enum ResizeDirection
+        {
+            Left = 1,
+            Right = 2,
+            Top = 3,
+            TopLeft = 4,
+            TopRight = 5,
+            Bottom = 6,
+            BottomLeft = 7,
+            BottomRight = 8,
+        }
+
+        private HwndSource _hwndSource;
+
         #region Click events
         protected void MinimizeClick(object sender, RoutedEventArgs e)
         {
@@ -70,6 +84,53 @@ namespace WPF.Windows.Resizable
                 default:
                     break;
             }
+        }
+
+        protected void ResizeRectangle_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle rectangle = sender as Rectangle;
+            switch (rectangle.Name)
+            {
+                case "top":
+                    Cursor = Cursors.SizeNS;
+                    ResizeWindow(ResizeDirection.Top);
+                    break;
+                case "bottom":
+                    Cursor = Cursors.SizeNS;
+                    ResizeWindow(ResizeDirection.Bottom);
+                    break;
+                case "left":
+                    Cursor = Cursors.SizeWE;
+                    ResizeWindow(ResizeDirection.Left);
+                    break;
+                case "right":
+                    Cursor = Cursors.SizeWE;
+                    ResizeWindow(ResizeDirection.Right);
+                    break;
+                case "topLeft":
+                    Cursor = Cursors.SizeNWSE;
+                    ResizeWindow(ResizeDirection.TopLeft);
+                    break;
+                case "topRight":
+                    Cursor = Cursors.SizeNESW;
+                    ResizeWindow(ResizeDirection.TopRight);
+                    break;
+                case "bottomLeft":
+                    Cursor = Cursors.SizeNESW;
+                    ResizeWindow(ResizeDirection.BottomLeft);
+                    break;
+                case "bottomRight":
+                    Cursor = Cursors.SizeNWSE;
+                    ResizeWindow(ResizeDirection.BottomRight);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void ResizeWindow(ResizeDirection direction)
+        {
+            SendMessage(_hwndSource.Handle, 0x112, (IntPtr)(61440 + direction), IntPtr.Zero);
         }
         #endregion
 
@@ -138,74 +199,13 @@ namespace WPF.Windows.Resizable
 
             Grid WindowBackground = GetTemplateChild("WindowBackground") as Grid;
             WindowBackground.Background = Background;
-#endregion
+            #endregion
 
             base.OnApplyTemplate();
         }
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
-
-        protected void ResizeRectangle_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Rectangle rectangle = sender as Rectangle;
-            switch (rectangle.Name)
-            {
-                case "top":
-                    Cursor = Cursors.SizeNS;
-                    ResizeWindow(ResizeDirection.Top);
-                    break;
-                case "bottom":
-                    Cursor = Cursors.SizeNS;
-                    ResizeWindow(ResizeDirection.Bottom);
-                    break;
-                case "left":
-                    Cursor = Cursors.SizeWE;
-                    ResizeWindow(ResizeDirection.Left);
-                    break;
-                case "right":
-                    Cursor = Cursors.SizeWE;
-                    ResizeWindow(ResizeDirection.Right);
-                    break;
-                case "topLeft":
-                    Cursor = Cursors.SizeNWSE;
-                    ResizeWindow(ResizeDirection.TopLeft);
-                    break;
-                case "topRight":
-                    Cursor = Cursors.SizeNESW;
-                    ResizeWindow(ResizeDirection.TopRight);
-                    break;
-                case "bottomLeft":
-                    Cursor = Cursors.SizeNESW;
-                    ResizeWindow(ResizeDirection.BottomLeft);
-                    break;
-                case "bottomRight":
-                    Cursor = Cursors.SizeNWSE;
-                    ResizeWindow(ResizeDirection.BottomRight);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void ResizeWindow(ResizeDirection direction)
-        {
-            SendMessage(_hwndSource.Handle, 0x112, (IntPtr)(61440 + direction), IntPtr.Zero);
-        }
-
-        private enum ResizeDirection
-        {
-            Left = 1,
-            Right = 2,
-            Top = 3,
-            TopLeft = 4,
-            TopRight = 5,
-            Bottom = 6,
-            BottomLeft = 7,
-            BottomRight = 8,
-        }
-
-        private HwndSource _hwndSource;
 
         protected override void OnInitialized(EventArgs e)
         {

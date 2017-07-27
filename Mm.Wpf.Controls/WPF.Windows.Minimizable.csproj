@@ -7,8 +7,8 @@
     <ProjectGuid>{81AE3DD4-CEE4-40D2-80AF-8371F4956026}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mm.Wpf.Controls</RootNamespace>
-    <AssemblyName>Mm.Wpf.Controls</AssemblyName>
+    <RootNamespace>WPF.Windows.Minimizable</RootNamespace>
+    <AssemblyName>WPF.Windows.Minimizable</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,6 +28,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
