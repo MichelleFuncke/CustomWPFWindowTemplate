@@ -108,6 +108,10 @@
       <Project>{f7f10c52-6dd8-49fc-833c-c19c31fe4ba7}</Project>
       <Name>WPF.Windows.Maximizable</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WPF.Windows.Resizable\WPF.Windows.Resizable.csproj">
+      <Project>{f7579c7d-325f-422c-84da-926d72ef2f93}</Project>
+      <Name>WPF.Windows.Resizable</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="239887.png" />

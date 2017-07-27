@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF.Windows.Fixed;
 using WPF.Windows.Maximizable;
+using WPF.Windows.Resizable;
 
 namespace WpfApplication1
 {
@@ -22,7 +23,7 @@ namespace WpfApplication1
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     //public partial class MainWindow : MinimizableWindow
-    public partial class MainWindow : MaximizableWindow
+    public partial class MainWindow : ResizableWindow
     {
         public MainWindow()
         {
