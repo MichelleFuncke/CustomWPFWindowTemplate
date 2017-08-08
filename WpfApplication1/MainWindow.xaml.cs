@@ -23,7 +23,7 @@ namespace WpfApplication1
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     //public partial class MainWindow : MinimizableWindow
-    public partial class MainWindow : MinimizableWindow
+    public partial class MainWindow : ResizableWindow
     {
         public MainWindow()
         {

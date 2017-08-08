@@ -6,7 +6,7 @@
     <SolidColorBrush x:Key="ForegroundBrush" Color="Black" />
     <SolidColorBrush x:Key="WindowBackground" Color="White" />
     <SolidColorBrush x:Key="MouseOverColor" Color="Gray" />
-    <!--This is where I include a general icon size-->
+    <!--This is where I include a defult general icon size-->
     <sys:Double x:Key="IconSize">15</sys:Double>
 
     <!--  Button style -->
@@ -36,7 +36,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="FontFamily" Value="Webdings"/>
         <Setter Property="FontSize" Value="13.333" />
-        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
         <Setter Property="Margin" Value="0,2,3,0"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -70,9 +70,9 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="5,0,0,0">
-                                    <Image x:Name="WindowIcon" Width="{StaticResource IconSize}" Height="{StaticResource IconSize}" />
-                                    <Label x:Name="WindowTitle" />
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="5,0,0,0" VerticalAlignment="Center">
+                                    <Image x:Name="WindowIcon" Height="{DynamicResource IconSize}" Width="{DynamicResource IconSize}" MinHeight="15" MinWidth="15"/>
+                                    <Label x:Name="WindowTitle" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
                                 </StackPanel>
 
                                 <Rectangle x:Name="moveRectangle" Fill="Transparent"
@@ -86,7 +86,7 @@
                                                 Content="r" />
                                 </StackPanel>
 
-                                <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="2,2,2,2">
+                                <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="2,2,2,2" Background="Pink">
                                     <AdornerDecorator>
                                         <ContentPresenter/>
                                     </AdornerDecorator>

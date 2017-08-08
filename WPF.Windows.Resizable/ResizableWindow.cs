@@ -191,6 +191,10 @@ namespace WPF.Windows.Resizable
             WindowTitle.FontFamily = FontFamily;
             WindowTitle.FontSize = FontSize;
 
+            this.Resources["ForegroundBrush"] = Foreground;
+            this.Resources["IconSize"] = FontSize;
+            //this.Resources["MouseOverColor"] = Foreground;
+
             Image WindowIcon = GetTemplateChild("WindowIcon") as Image;
             WindowIcon.Source = Icon;
 
