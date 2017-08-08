@@ -59,6 +59,9 @@ namespace WPF.Windows.Minimizable
             WindowTitle.FontFamily = FontFamily;
             WindowTitle.FontSize = FontSize;
 
+            this.Resources["ForegroundBrush"] = Foreground;
+            this.Resources["IconSize"] = FontSize;
+
             Image WindowIcon = GetTemplateChild("WindowIcon") as Image;
             WindowIcon.Source = Icon;
 
